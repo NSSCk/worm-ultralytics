@@ -8,7 +8,8 @@
 * matplotlib
 * Ubuntu/Windows
 * It is best to use GPU training
-* 
+* Attention: Make appropriate modifications according to your environmental needs
+  
 # Dataset download address：
 * The worm detection dataset can be obtained in worm data(https://drive.google.com/drive/folders/1PM4Rvrz-V6p-xqAEWsz66tAKu4W5x8Mc), which can extract and recover training.
 * Part of the available data is in the Datasets folder
@@ -26,16 +27,26 @@ detect train data=datasets/wheat/my data.yaml model=ultralytics/cfg/models/v8/yo
 * If you want to specify which GPU devices to use, you can add 'CUDA_VISIBLEDEVICES=0.3' before the instruction (for example, I only need to use the first and fourth GPU devices in the device)
 * `CUDA_VISIBLE_DEVICES=0,3 torchrun --nproc_per_node=2 train_multi_GPU.py`
 
-# Precautions
-*When using training scripts, be sure to set '-- data path' to the root directory where you store the 'DRIVE' folder**
-*When using prediction scripts, set 'weights_path' to your own generated weight path.
+## Precautions
+* When using training scripts, be sure to set '-- data path' to the root directory where you store the 'DRIVE' folder**
+* When using prediction scripts, set 'weights_path' to your own generated weight path.
 
-# Load a model
+## Load a model
 `
 from ultralytics import YOLO
 model = YOLO("path/to/best.pt")  # load a  model
 `
-# Validate the model
+## Validate the model
 `
 metrics = model.val()  # no arguments needed, dataset and settings remembered
+`
+## Tracking
+* Track the worm and save the video locally, please run track.py Attention: Appropriate modifications need to be made according to your local environment
+`
+python track.py
+`
+## behavior-analysis
+* To analyze the behavior of the worm, please run behavior-analysis.py Attention: Appropriate modifications need to be made according to your local environment
+`
+python behavior-analysis.py
 `

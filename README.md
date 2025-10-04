@@ -1,6 +1,6 @@
 
 
-### Environment Configuration
+# Environment Configuration
 * Python3.6/3.7/3.8
 * Pytorch
 * numpy
@@ -9,9 +9,11 @@
 * Ubuntu/Windows
 * It is best to use GPU training
 * 
-### Dataset download address：
-*The worm detection dataset can be obtained in worm data(https://drive.google.com/drive/folders/1PM4Rvrz-V6p-xqAEWsz66tAKu4W5x8Mc), which can extract and recover training.
-*Part of the available data is in the data folder
+# Dataset download address：
+* The worm detection dataset can be obtained in worm data(https://drive.google.com/drive/folders/1PM4Rvrz-V6p-xqAEWsz66tAKu4W5x8Mc), which can extract and recover training.
+* Part of the available data is in the Datasets folder
+* The video used can be found in train/images/
+
 
 ##Training methods
 *Ensure that the dataset is prepared in advance
@@ -24,7 +26,7 @@ detect train data=datasets/wheat/my data.yaml model=ultralytics/cfg/models/v8/yo
 *If you want to specify which GPU devices to use, you can add 'CUDA_VISIBLEDEVICES=0.3' before the instruction (for example, I only need to use the first and fourth GPU devices in the device)
 * `CUDA_VISIBLE_DEVICES=0,3 torchrun --nproc_per_node=2 train_multi_GPU.py`
 
-##Precautions
+# Precautions
 *When using training scripts, be sure to set '-- data path' to the root directory where you store the 'DRIVE' folder**
 *When using prediction scripts, set 'weights_path' to your own generated weight path.
 "
@@ -34,5 +36,6 @@ from ultralytics import YOLO
 
 model = YOLO("path/to/best.pt")  # load a  model
 # Validate the model
+
 metrics = model.val()  # no arguments needed, dataset and settings remembered
 "

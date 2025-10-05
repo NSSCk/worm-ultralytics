@@ -12,8 +12,8 @@
   
 # Dataset download address：
 * The worm detection dataset can be obtained in worm data(https://drive.google.com/drive/folders/1PM4Rvrz-V6p-xqAEWsz66tAKu4W5x8Mc), which can extract and recover training.
-* Part of the available data is in the Datasets folder
 * The video used can be found in train/images/
+* Part of the available data is in the Datasets folder
 
 
 ## Training methods

@@ -41,12 +41,23 @@ model = YOLO("path/to/best.pt")  # load a  model
 metrics = model.val()  # no arguments needed, dataset and settings remembered
 `
 ## Tracking
-* Track the worm and save the video locally, please run track.py Attention: Appropriate modifications need to be made according to your local environment
+* Track the worm and save the video locally, please run track.py
+*  Attention: Appropriate modifications need to be made according to your local environment
+*  
 `
 python track.py
 `
 ## behavior-analysis
-* To analyze the behavior of the worm, please run behavior-analysis.py Attention: Appropriate modifications need to be made according to your local environment
+* To analyze the behavior of the worm, please run behavior-analysis.py
+* Attention: Appropriate modifications need to be made according to your local environment
+* 
 `
 python behavior-analysis.py
+`
+## complex-behavior-analysis
+* To analyze the  complex behavior of the worm, please run behavior-analysis.py
+* Attention: Appropriate modifications need to be made according to your local environment
+* 
+`
+python COmplex-behavior-analysis.py
 `
